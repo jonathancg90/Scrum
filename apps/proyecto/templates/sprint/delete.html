@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Borrar Sprint{% endblock %}
+{% block content %}
+<section class="container">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <p>
+            ¿ Estas seguro de eliminarlo ?
+        </p>
+
+        <div class="form-actions">
+            <input type="submit" value="Borrar" class="btn btn-danger" />
+		    <a href="{% url Lista_sprint_view sprint.project.id  %}" class="btn">Cancelar</a>
+        </div>
+    </form>
+
+</section>
+{% endblock %}

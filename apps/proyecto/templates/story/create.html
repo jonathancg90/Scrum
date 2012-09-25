@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Crear Story{% endblock %}
+{% block content %}
+
+<form method="post" action="" class="form-horizontal">
+{% csrf_token %}
+        {% crispy form %}
+
+        <div class="form-actions">
+            <input type="submit" class="btn btn-primary" value="Guardar" />
+            o	   
+	            <a href="{% url Lista_story_view sprint.id %}" class="btn">Volver</a>
+        </div>
+
+</form>
+{% endblock %}

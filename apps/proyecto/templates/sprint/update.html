@@ -1,0 +1,16 @@
+  {% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Actualizar Sprint{% endblock %}
+{% block content %}
+    <form method="post" action="" class="form-horizontal">
+	{% csrf_token %}
+        {% crispy form %}
+
+        <div class="form-actions">
+            <input type="submit" class="btn btn-primary" value="Guardar cambios" />
+            o
+            <a href="{% url Lista_sprint_view sprint.project.id %}" class="btn">Cancelar</a>
+        </div>
+
+    </form>
+{% endblock %}
